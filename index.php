@@ -1,36 +1,30 @@
-<?php
-$a = 2;
-$b = 3;
-$sum = $a+$b;
-echo "The sum is $sum";
-echo 'The sum is $sum';
-echo "<br>";
-$fname = "Ram";
-$lname = "Sharma";
-$fullname = $fname . ' ' . $lname;
-echo "Hello, $fullname";
-function myfunction($x)
-{
-    echo "hello, $x from function";
-}
- 
-myfunction('ram');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="flex justify-between items-center py-3 px-20 bg-gray-100 text-blue-800">
+        <img src="https://via.placeholder.com/150" alt="logo" class="h-12">
+        <div class="flex gap-4">
+            <a href="#">Home</a>
+            <a href="#">National</a>
+            <a href="#">International</a>
+            <a href="#">Sport</a>
+            <a href="#">Health</a>
+            <a href="#">Entertainment</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
 
-$fruits = array('Apple','Banana','Orange');
-$classes = array('CSIT'=>'48','BCA' => '30', 'BIM' => '12');
-
-echo "<br>";
-echo $classes['CSIT'];
-rsort($fruits);
-foreach($fruits as $fruit)
-{
-    echo "$fruit<br>";
-}
-
-echo "<br>";
-foreach($classes as $k=>$v)
-{
-    echo "Faculty $k has $v students <br>";
-}
-
-?>
+    <img src="https://nepalserofero.com/img/ads/b_1695966419.gif" alt="" class="w-full">
+    <div class="pt-4 mt-5 px-24">
+        <h2 class="text-center font-bold text-blue-600 text-5xl ">सर्दीक्षेत्रमा झिंगाको आतंक बढेपछि ह्याचरीमा गाउँपालिकाको अनुगमन</h2>
+        <img src="https://nepalserofero.com/img/news/binai%20tirveni_1722401868.jpg" alt="" class="w-full mt-5">
+    </div>
+    
+</body>
+</html>
