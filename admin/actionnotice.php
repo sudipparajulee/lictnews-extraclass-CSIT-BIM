@@ -5,12 +5,7 @@ if(isset($_POST['store']))
     $title = $_POST['title'];
     $date = $_POST['date'];
 
-    $server = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "lictnews";
-
-    $conn = mysqli_connect($server, $username, $password, $database);
+    include 'dbconnection.php';
 
     $qry = "INSERT INTO notices(priority, title, notice_date) VALUES('$priority', '$title', '$date')";
 
