@@ -13,10 +13,14 @@ if(isset($_POST['store']))
 
     if($result)
     {
-        echo "Notice added successfully";
+        echo "<script>alert('Notice added successfully');
+        window.location.href='notice.php';
+        </script>";
     }
     else
     {
-        echo "Failed to add notice";
+        echo "<script>alert('Failed to add notice');
+        window.location.href='notice.php';
+        </script>";
     }
 }

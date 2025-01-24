@@ -1,5 +1,5 @@
 <?php include 'header.php'; 
-$qry = "SELECT * FROM notices";
+$qry = "SELECT * FROM notices ORDER BY priority ASC";
 include 'dbconnection.php';
 $result = mysqli_query($conn, $qry);
 ?>
