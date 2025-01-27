@@ -26,7 +26,7 @@ $result = mysqli_query($conn, $qry);
             <td class="border p-2"><?php echo $row['title']; ?></td>
             <td class="border p-2"><?php echo $row['notice_date']; ?></td>
             <td class="border p-2"> 
-                <a href="" class="bg-blue-700 text-white px-3 py-1 mx-0.5 rounded">Edit</a>
+                <a href="editnotice.php?id=<?php echo $row['id'];?>" class="bg-blue-700 text-white px-3 py-1 mx-0.5 rounded">Edit</a>
                 <a href="" class="bg-red-700 text-white px-3 py-1 mx-0.5 rounded">Delete</a>
             </td>
         </tr>

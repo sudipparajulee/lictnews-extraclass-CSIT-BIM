@@ -24,3 +24,27 @@ if(isset($_POST['store']))
         </script>";
     }
 }
+
+if(isset($_POST['update']))
+{
+    $id = $_POST['id'];
+    $priority = $_POST['priority'];
+    $title = $_POST['title'];
+    $date = $_POST['date'];
+    
+    include 'dbconnection.php';
+    $qry = "UPDATE notices SET priority='$priority', title='$title', notice_date='$date' WHERE id=$id";
+    $result = mysqli_query($conn, $qry);
+    if($result)
+    {
+        echo "<script>alert('Notice updated successfully');
+        window.location.href='notice.php';
+        </script>";
+    }
+    else
+    {
+        echo "<script>alert('Failed to update notice');
+        window.location.href='notice.php';
+        </script>";
+    }
+}
