@@ -27,7 +27,7 @@ $result = mysqli_query($conn, $qry);
             <td class="border p-2"><?php echo $row['notice_date']; ?></td>
             <td class="border p-2"> 
                 <a href="editnotice.php?id=<?php echo $row['id'];?>" class="bg-blue-700 text-white px-3 py-1 mx-0.5 rounded">Edit</a>
-                <a href="" class="bg-red-700 text-white px-3 py-1 mx-0.5 rounded">Delete</a>
+                <a href="actionnotice.php?deleteid=<?php echo $row['id'];?>" class="bg-red-700 text-white px-3 py-1 mx-0.5 rounded" onclick="return confirm('Are you sure to Delete?')">Delete</a>
             </td>
         </tr>
         <?php
