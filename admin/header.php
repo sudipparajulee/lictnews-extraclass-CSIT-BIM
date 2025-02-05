@@ -13,7 +13,7 @@
             <nav>
                 <a href="dashboard.php" class="font-bold text-xl pl-2 border-b block border-gray-200 py-3 hover:bg-gray-200">Dashboard</a>
                 <a href="notice.php" class="font-bold text-xl pl-2 border-b block border-gray-200 py-3 hover:bg-gray-200">Notices</a>
-                <a href="" class="font-bold text-xl pl-2 border-b block border-gray-200 py-3 hover:bg-gray-200">Categories</a>
+                <a href="category.php" class="font-bold text-xl pl-2 border-b block border-gray-200 py-3 hover:bg-gray-200">Categories</a>
                 <a href="" class="font-bold text-xl pl-2 border-b block border-gray-200 py-3 hover:bg-gray-200">News</a>
                 <a href="" class="font-bold text-xl pl-2 border-b block border-gray-200 py-3 hover:bg-gray-200">Logout</a>
             </nav>
