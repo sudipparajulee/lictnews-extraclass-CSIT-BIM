@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $qry);
         ?>
         <tr class="text-center">
             <td class="border p-2"><?php echo $row['news_date']; ?></td>
-            <td class="border p-2"><?php echo $row['phopath']; ?></td>
+            <td class="border p-2"><?php echo $row['photopath']; ?></td>
             <td class="border p-2"><?php echo $row['title']; ?></td>
             <td class="border p-2"><?php echo $row['description']; ?></td>
             <td class="border p-2"><?php echo $row['category_id']; ?></td>

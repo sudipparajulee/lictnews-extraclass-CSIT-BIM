@@ -6,7 +6,7 @@ $resultcat = mysqli_query($conn, $qrycat);
     <h1 class="font-bold text-3xl">Create News</h1>
     <hr class="h-1 bg-red-600">
 
-    <form action="actionnews.php" method="POST" class="mt-5">
+    <form action="actionnews.php" method="POST" class="mt-5" enctype="multipart/form-data">
         <select name="category_id" id="" class="w-full p-2 my-2 border border-gray-400 rounded-lg">
             <?php while($rowcat = mysqli_fetch_assoc($resultcat)){ ?>
             <option value="<?php echo $rowcat['id'];?>"><?php echo $rowcat['name']; ?></option>
