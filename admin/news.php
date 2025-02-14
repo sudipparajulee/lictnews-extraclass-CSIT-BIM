@@ -1,5 +1,5 @@
 <?php include 'header.php'; 
-$qry = "SELECT * FROM news";
+$qry = "SELECT news.*,categories.name as category_name FROM news INNER JOIN categories ON news.category_id = categories.id";
 include 'dbconnection.php';
 $result = mysqli_query($conn, $qry);
 ?>
@@ -25,13 +25,15 @@ $result = mysqli_query($conn, $qry);
         ?>
         <tr class="text-center">
             <td class="border p-2"><?php echo $row['news_date']; ?></td>
-            <td class="border p-2"><?php echo $row['photopath']; ?></td>
+            <td class="border p-2">
+                <img src="../uploads/<?php echo $row['photopath']; ?>" alt="" class="h-20">
+            </td>
             <td class="border p-2"><?php echo $row['title']; ?></td>
             <td class="border p-2"><?php echo $row['description']; ?></td>
-            <td class="border p-2"><?php echo $row['category_id']; ?></td>
+            <td class="border p-2"><?php echo $row['category_name']; ?></td>
             <td class="border p-2"> 
-                <a href="editnotice.php?id=<?php echo $row['id'];?>" class="bg-blue-700 text-white px-3 py-1 mx-0.5 rounded">Edit</a>
-                <a href="actionnotice.php?deleteid=<?php echo $row['id'];?>" class="bg-red-700 text-white px-3 py-1 mx-0.5 rounded" onclick="return confirm('Are you sure to Delete?')">Delete</a>
+                <a href="editnews.php?id=<?php echo $row['id'];?>" class="bg-blue-700 text-white px-3 py-1 mx-0.5 rounded">Edit</a>
+                <a href="actionnews.php?deleteid=<?php echo $row['id'];?>" class="bg-red-700 text-white px-3 py-1 mx-0.5 rounded" onclick="return confirm('Are you sure to Delete?')">Delete</a>
             </td>
         </tr>
         <?php
