@@ -1,3 +1,8 @@
+<?php 
+ $qrycat = "SELECT * FROM categories ORDER BY priority";
+ include 'admin/dbconnection.php';
+ $resultcat = mysqli_query($conn,$qrycat);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +16,11 @@
         <img src="https://nepalserofero.com/images/logo/logo.png" alt="logo" class="h-12">
         <div class="flex gap-4">
             <a href="index.php">Home</a>
-            <a href="#">National</a>
-            <a href="#">International</a>
-            <a href="#">Sport</a>
-            <a href="#">Health</a>
-            <a href="#">Entertainment</a>
+            <?php while($rowcat = mysqli_fetch_assoc($resultcat))
+            {
+            ?>
+            <a href="#"><?php echo $rowcat['name'];?></a>
+            <?php } ?>
             <a href="login.php">Login</a>
         </div>
     </nav>
