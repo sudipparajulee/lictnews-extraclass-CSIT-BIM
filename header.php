@@ -19,7 +19,7 @@
             <?php while($rowcat = mysqli_fetch_assoc($resultcat))
             {
             ?>
-            <a href="#"><?php echo $rowcat['name'];?></a>
+            <a href="categorynews.php?id=<?php echo $rowcat['id'];?>"><?php echo $rowcat['name'];?></a>
             <?php } ?>
             <a href="login.php">Login</a>
         </div>
