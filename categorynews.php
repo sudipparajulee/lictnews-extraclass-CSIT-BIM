@@ -1,6 +1,6 @@
 <?php include 'header.php'; 
 $catid = $_GET['id'];
-$qrycat = "SELECT * FROM category WHERE id=$catid";
+$qrycat = "SELECT * FROM categories WHERE id=$catid";
 $qry = "SELECT * FROM news WHERE category_id=$catid ORDER BY news_date DESC";
 include 'admin/dbconnection.php';
 $resultcat = mysqli_query($conn,$qrycat);
