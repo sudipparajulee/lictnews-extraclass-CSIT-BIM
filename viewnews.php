@@ -24,7 +24,7 @@ $relatednews = mysqli_query($conn,$qryrelated);
                 while($related = mysqli_fetch_assoc($relatednews))
                 {    
                 ?>
-                <a href="" class="p-2 shadow-sm rounded-lg bg-gray-100 flex gap-4 hover:shadow-md">
+                <a href="viewnews.php?id=<?php echo $related['id'] ?>" class="p-2 shadow-sm rounded-lg bg-gray-100 flex gap-4 hover:shadow-md">
                     <img src="uploads/<?php echo $related['photopath'] ?>" alt="" class="w-20 h-20 object-cover">
                     <h1 class="font-bold text-lg"><?php echo $related['title']; ?></h1>
                 </a>

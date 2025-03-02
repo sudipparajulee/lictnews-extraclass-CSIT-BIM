@@ -13,10 +13,10 @@ $result = mysqli_query($conn,$qry);
             <?php 
             while($row = mysqli_fetch_assoc($result))
             { ?>
-            <a href="" class="p-2 shadow rounded-lg bg-gray-100">
+            <a href="viewnews.php?id=<?php echo $row['id'] ?>" class="p-2 shadow rounded-lg bg-gray-100">
                 <img src="uploads/<?php echo $row['photopath'];?>" alt="" class="h-44 w-full object-cover">
                 <h1 class="font-bold text-lg"><?php echo $row['title']; ?></h1>
-                <p class="text-sm"><?php echo $row['description']; ?></p>
+                <p class="text-sm line-clamp-3"><?php echo $row['description']; ?></p>
             </a>
             <?php } ?>
         </div>
