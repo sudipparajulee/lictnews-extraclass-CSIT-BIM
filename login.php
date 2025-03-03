@@ -16,4 +16,19 @@ if(isset($_POST['login']))
 {
     $email = $_POST['email'];
     $password = $_POST['password'];
+
+    $qry = "SELECT * FROM users WHERE email='$email' AND password= md5('$password')";
+    include 'admin/dbconnection.php';
+    $result = mysqli_query($conn, $qry);
+    if(mysqli_num_rows($result) > 0)
+    {
+        header('location: admin/dashboard.php');
+    }
+    else
+    {
+        echo '<script>
+            alert("Invalid Login Details");
+            location.history.back();
+        </script>';
+    }
 }
