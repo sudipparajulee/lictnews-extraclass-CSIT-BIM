@@ -1,4 +1,6 @@
-<?php include 'header.php'; ?>
+<?php
+session_start();
+include 'header.php'; ?>
 
     <div class="w-1/2 p-4 bg-gray-100 shadow rounded-lg mx-auto my-10 text-center">
         <h1 class="font-bold text-2xl">Login</h1>
@@ -22,6 +24,9 @@ if(isset($_POST['login']))
     $result = mysqli_query($conn, $qry);
     if(mysqli_num_rows($result) > 0)
     {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['login'] = 'yes';
+        $_SESSION['name'] = $row['name'];
         header('location: admin/dashboard.php');
     }
     else
