@@ -6,9 +6,9 @@ $result = mysqli_query($conn,$qry);
     <img src="https://nepalserofero.com/img/ads/b_1695966419.gif" alt="" class="w-full">
     
 
-    <div class="px-24 py-10">
+    <div class="lg:px-24 sm:px-12 px-5 py-10">
         <h1 class="font-bold text-3xl border-l-4 pl-2 border-blue-400">Latest News</h1>
-        <div class="grid grid-cols-4 gap-10 py-10">
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-10 py-10">
             <?php 
             while($row = mysqli_fetch_assoc($result))
             { ?>
